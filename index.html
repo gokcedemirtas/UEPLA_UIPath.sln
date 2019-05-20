@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        input[type=text], select {
+            width: 100%;
+            padding: 6px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 5px;
+        }
+
+        form {
+            margin-top: 50px;
+            align-items: center;
+            margin-left: 400px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <form class="col-md-6" id="form_ID">
+        <div class="container">
+            <div class="form-group">
+                <label for="Mikroorganizma_Select">Mikroorganizma : </label>
+                <select class="from-control" id="Mikroorganizma_Select">
+                    <option>CAMPYLOBACTER</option>
+                    <option>SALMONELLA</option>
+                    <option>SHIGELLA</option>
+                    <option>VTEC</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="OrnekTipi_Select">Örnek Tipi : </label>
+                <select class="form-control" id="OrnekTipi_Select">
+                    <option>Bilinmiyor</option>
+                    <option>Gaita</option>
+                    <option>Idrar</option>
+                    <option>Kan</option>
+                    <option>Diger</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="SonucCikisTarihi_Select">Sonuç Çýkýþ Tarihi : </label>
+                <input type="datetime-local" id="SonucCikisTarihi_Select">
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="ProtokolNumarasi_Select">Katýlýmcý Laboratuvar Protokol Numarasý : </label>
+                <input type="number" id="ProtokolNumarasi_Select">
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="Cinsiyet_Select">Cinsiyet : </label>
+                <select class="form-control" id="Cinsiyet_Select">
+                    <option>Bilinmiyor</option>
+                    <option>Kadýn</option>
+                    <option>Erkek</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="Yas_Select">Yaþ : </label>
+                <label>1 yaþýndan küçük</label>
+                <input type="checkbox" id="Yas_Select">
+                <input type="number" id="Yas_Value">
+                <button type="submit" class="btn btn-light" style="font-size:12pt">Doðum Tarihiyle Yaþ Hesapla</button>
+            </div>
+
+
+            <div class="form-group">
+                <label for="Tur_Select">Tür : </label>
+                <select class="form-control" id="Tur_Select">
+                    <option>Coli</option>
+                    <option>Jejuni</option>
+                    <option>lari</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="TestUygulandiMi_Select">Test Uygulandý mý : </label>
+                <select class="form-control" id="TestUygulandiMi_Select">
+                    <option>Evet</option>
+                    <option>Hayýr</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="AmdRehberi_Select">Amd Rehberi : </label>
+                <select class="form-control" id="AmdRehberi_Select">
+                    <option>CLSI</option>
+                    <option>EUCAST</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="Yontem_Select">Yöntem : </label>
+                <select class="form-control" id="Yontem_Select">
+                    <option>DiskDifüzyon</option>
+                    <option>ETest</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="ZoneCapi_Select">Zone Çapý : </label>
+                <input type="number" id="ZoneCapi_Select">
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="SIR_Select">S / I / R : </label>
+                <select class="form-control" id="Sir_Select">
+                    <option>Çalýþýlmadý</option>
+                    <option>Duyarlý</option>
+                    <option>OrtaDuyarlý</option>
+                    <option>Dirençli</option>
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="Antibiyotik_Select">Antibiyotik : </label>
+                <select class="form-control" id="Antibiyotik_Select">
+                    <option>Ampisilin</option>
+                    <option>Kloramfenikol</option>
+                    <option>Gentamisin</option>
+                    <option>Kanamisin</option>
+                    <option>Streptomisin</option>
+                    <option>Trimetorim-Sülfametoksazol</option>
+                    <option>Trimetoprim</option>
+                    <option>Sülfonamid</option>
+                    <option>Tetrasiklin</option>
+                    <option>Nalidiksik asit</option>
+                    <option>Siprofloksasin</option>
+                    <option>Sefotaksim</option>
+                    <option>Seftazidim</option>
+                </select>
+            </div>
+
+
+
+            <label for="Aciklamalar_Select">Açýklamalar : </label>
+            <!-- <input type="textarea" class="form-control-file" id="Aciklamalar_Select"> -->
+            <textarea class="" id="Aciklama_Text" placeholder="Bir þeyler yazýnýz..."></textarea>
+
+
+            <button type="submit" id="Gonder_Button" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function () {
+        $("#Gonder_Button").click(function (e) {
+            e.preventDefault();
+            var myForm = {
+                'Mikroorganizma': $("#Mikroorganizma_Select").val(),
+                'OrnekTipi': $("#OrnekTipi_Select").val(),
+                'SonucCikisTarihi': $("#SonucCikisTarihi_Select").val(),
+                'ProtokolNumarasi': $("#ProtokolNumarasi_Select").val(),
+                'Cinsiyet': $("#Cinsiyet_Select").val(),
+                'Yas': $("#Yas_Value").val(),
+                'Tur': $("#Tur_Select").val(),
+                'TestUygulandiMi': $("#TestUygulandiMi_Select").val(),
+                'AmdRehberi': $("#AmdRehberi_Select").val(),
+                'Yontem': $("#Yontem_Select").val(),
+                'ZoneCapi': $("#ZoneCapi_Select").val(),
+                'SirDurumu': $("#Sir_Select").val(),
+                'Antibiyotik': $("#Antibiyotik_Select").val(),
+                'Aciklamalar': $("#Aciklama_Text").val()
+            };
+            var urlsave = "https://localhost:44300/api/kaydets/save";
+            $.ajax({
+                url: urlsave,
+                type: 'post',
+                dataType: "json",
+                data: JSON.stringify(myForm),
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    alert("baþarý");
+                }
+            });
+        });
+    });
+</script>
